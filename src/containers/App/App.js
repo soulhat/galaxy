@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
-import logo from './logo.svg';
+import { Button } from 'react-bootstrap';
+import Menu from '../Menu/Menu';
+
 import './App.css';
 
 class App extends Component {
@@ -8,11 +9,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+          <Menu />
         </div>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
+          <Button>{process.env.REACT_APP_SECRET_CODE}</Button>
         </p>
       </div>
     );

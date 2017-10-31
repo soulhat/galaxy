@@ -1,11 +1,13 @@
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/css/bootstrap-theme.css';
-
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import configureStore from './store/configureStore';
+import Root from './containers/Root';
+
 import './index.css';
-import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+let store = configureStore();
+
+render(<Root store={store} />, document.getElementById('root'));
+
 registerServiceWorker();
