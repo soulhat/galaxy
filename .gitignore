@@ -59,3 +59,7 @@ typings/
 
 # Sass
 src/**/*.css
+src/*.css
+
+# Build
+build/
